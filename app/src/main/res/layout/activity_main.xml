@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/yellow">
+
+    <TextView
+        android:id="@+id/tvPersonalDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="Personal Details"
+        android:textColor="@color/red"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPersonalDetails"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Name:"
+        android:textColor="@color/red"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/etname"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPersonalDetails"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/tvName"
+        android:hint="Enter your full name"
+        android:textColor="@color/red"
+        android:textColorHint="@color/red" />
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvName"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Gender:"
+        android:textColor="@color/red"
+        android:textSize="30sp" />
+
+    <RadioGroup
+        android:id="@+id/rgroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etname"
+        android:layout_toRightOf="@id/gender"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rbtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gender"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Male"
+            android:textColor="@color/red"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rbtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Female"
+            android:textColor="@color/red"
+            android:textStyle="bold" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age:"
+        android:textColor="@color/red"
+        android:textSize="30sp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/rgroup"
+        />
+
+    <EditText
+        android:id="@+id/etage"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rgroup"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/age"
+        android:hint="(in years)"
+        android:textColor="@color/red"
+        android:textColorHint="@color/red" />
+
+    <TextView
+        android:id="@+id/tvminors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/age"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Select your minors :"
+        android:textColor="@color/red"
+        android:textSize="30sp" />
+
+
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/tvminors"
+            android:textColor="@color/red"
+            android:text="Android" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/checkBox1"
+
+            android:textColor="@color/red"
+            android:text="Data Science" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/checkBox2"
+
+            android:textColor="@color/red"
+            android:text="MERN Stack" />
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/checkBox3"
+            android:textColor="@color/red"
+            android:text="Psychology" />
+
+
+
+
+
+    <Button
+        android:id="@+id/btsave"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBox4"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+
+
+
+        android:background="@drawable/round_btn1"
+        android:backgroundTint="@color/red"
+        android:text="Save"
+        android:textColor="@color/white" />
+
+
+
+
+
+
+
+</RelativeLayout>
